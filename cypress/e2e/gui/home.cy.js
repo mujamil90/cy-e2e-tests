@@ -18,27 +18,20 @@ describe('Home page', () => {
   cy.window().then(($window) => {
     expect($window.scrollY).to.be.closeTo(200, 100);
   });
-
-
- 
-     
+   
  });
 
     it('Check menu options', () => {
         
         cy.get('ul#primary-menu a')
         .should(($span) => {
-          // https://on.cypress.io/$
           // return an array of texts from all of the p's
           const texts = $span.map((i, el) => Cypress.$(el).text())
-
           // jquery map returns jquery object
           // and .get() convert this to simple array
           const menuOptions = texts.get()
-
-          // array should have length of 3
+          // array should have length of 5
           expect(menuOptions, 'has 5 span').to.have.length(5)
-
           // use second argument to expect(...) to provide clear
           // message with each assertion
           expect(menuOptions, 'has expected text in each span').to.deep.eq([
@@ -71,8 +64,6 @@ describe('Home page', () => {
                   }
 
               })
-
-
           }
 
       }).then(($links) => {
