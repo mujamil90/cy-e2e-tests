@@ -5,7 +5,7 @@ describe('Sternico section', () => {
       })
   
 
-      it.only("Verify handling of new tab when redirect to Sternico and testing of multi origin", () => {
+      it("Verify handling of new tab when redirect to Sternico and testing of multi origin", () => {
         cy.get("[href*='sternico']")
         .last()
           .invoke("removeAttr", "target")
@@ -13,5 +13,8 @@ describe('Sternico section', () => {
           cy.contains('Willkommen').should('exist')
         cy.go('back')
       });
+
+
+     
    
 });

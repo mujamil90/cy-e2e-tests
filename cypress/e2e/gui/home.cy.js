@@ -11,7 +11,7 @@ describe('Home page', () => {
     
 
  it('Check page is scrolling after click on Advantages tab', function() {
-  cy.get("a[href='/#vorteile']")
+  cy.get(home.advantagesMenuOption)
   .first()
   .click()
 
@@ -23,7 +23,7 @@ describe('Home page', () => {
 
     it('Check menu options', () => {
         
-        cy.get('ul#primary-menu a')
+        cy.get(home.menuOptions)
         .should(($span) => {
           // return an array of texts from all of the p's
           const texts = $span.map((i, el) => Cypress.$(el).text())
@@ -71,9 +71,46 @@ describe('Home page', () => {
           cy.log(`**** total links **** ${totalLinks}`)
           cy.log(`**** broken links **** ${brokenLinks}`)
           cy.log(`**** active links **** ${activeLinks}`)
-
-
       })
   })
     
+  it("Check redirection of all 3 more about buttons", () => {
+  
+    cy.get(home.getToKnow)
+    .as('moreAboutButtons')
+    .should('have.length', 5)
+    .eq(1)
+    .should('have.text', 'RAILBASE KENNENLERNEN')
+    .click({force: true})
+    cy.url().should('include', '/railbase-kennenlernen/')
+    cy.go('back')
+
+    cy.get('@moreAboutButtons')
+    .eq(3)
+    .click()
+    cy.url().should('include', '/railbase-kennenlernen/')
+    cy.go('back')
+
+    cy.get('@moreAboutButtons')
+    .last()
+    .click()
+    cy.url().should('include', '/railbase-kennenlernen/')
+    cy.go('back')
+
+  });
+
+
+  it("Mobile screen resolution - Check redirection when when click on more about button", () => {
+    cy.viewport('iphone-xr')
+    cy.get(home.mobileMenu)
+    .should('have.length', 1)
+    .click()
+
+    cy.get(home.getToKnow)
+    .eq(2)
+    .should('have.text', 'RAILBASE KENNENLERNEN')
+    .click()
+
+    cy.url().should('include', '/railbase-kennenlernen/')
+  });
 });

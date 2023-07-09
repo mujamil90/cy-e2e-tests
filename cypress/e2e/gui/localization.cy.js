@@ -6,16 +6,15 @@ describe('Localization tests',() => {
     beforeEach(() => {
                
       // Load all localization data
-           cy.fixture(Cypress.env('language')).as("localizationData");
-       
+        cy.fixture(Cypress.env('language')).as("localizationData"); 
         cy.visit('')
       });
 
     it('Localization based test - Switch language', () => {
         cy.get("@localizationData").then(localizationData => {
-       const currentLang =Cypress.env('language')  
+        const currentLang =Cypress.env('language')  
         cy.selectLanguage(currentLang)
-        cy.get("h1.elementor-heading-title.elementor-size-default")
+        cy.get(home.railbaseMainPageHeader)
         .should('have.length', 1)
         .should('have.text', localizationData.header)
    
@@ -28,7 +27,7 @@ describe('Localization tests',() => {
         const currentLang =Cypress.env('language')  
         cy.log(localizationData.description)
         cy.selectLanguage(currentLang)
-        cy.get("h1.elementor-heading-title.elementor-size-default")
+        cy.get(home.railbaseMainPageHeader)
         .parent()
         .parent()
         .next()

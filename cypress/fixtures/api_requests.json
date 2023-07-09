@@ -44,17 +44,5 @@
   "add": "Deutsch Eck",
   "fill_char":"@"
 
-},
-{
-  "status_code" : 200,
-  "expected_result" : "Deutsch Eck is in koblenz",
-  "expected_result_fill_text_char_default" : "Deutsch Eck is in *******",
-  "expected_result_fill_text_value" : "Deutsch Eck is in berlin",
-  "expected_result_fill_char_value" : "Deutsch Eck is in =======",
-  "error_message_exceeds_word_limit" : "User Black List Exceeds Limit of 10 Words.",
-  "error_message_invalid_replacement_text" : "Invalid User Replacement Text",
-  "error_message_invalid_replacement_char" :"Invalid User Replacement Characters"
-}
-
-  ]
+}]
 }

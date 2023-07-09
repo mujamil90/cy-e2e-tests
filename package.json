@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cypress:run:api": "./node_modules/.bin/cypress run    --spec 'cypress/e2e/api/**.**.js'",
     "cypress:run:web": "./node_modules/.bin/cypress run   --browser=chrome --env  language=en  --headed  --spec 'cypress/e2e/gui/**.**.js'",
-    "cy:open:mob": "./node_modules/.bin/cypress run   --browser=chrome --env device=mob --spec cypress/e2e/gui/**.spec.js"
+    "cy:open:mob": "./node_modules/.bin/cypress run   --browser=chrome --env device=mob --spec cypress/e2e/gui/**.spec.js",
+    "cy:run:all": "./node_modules/.bin/cypress run   --browser=chrome"
   },
   "keywords": [],
   "author": "",

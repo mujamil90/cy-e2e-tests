@@ -23,7 +23,7 @@ describe('verify PurgoMalum Api with negative test cases', () => {
             })
                 .should((response) => {
                 
-                    expect(response.body.error).to.eq('User Black List Exceeds Limit of 10 Words.')
+                    expect(response.body.error).to.eq('Invalid Characters in User Black List')
                 });
         });
 });
