@@ -24,7 +24,7 @@ chai.use(chaiJsonSchema);
 require('@cypress/skip-test/support')
 
 before(() => {
-    cy.log('Checking lanuage...')
+    cy.log('Checking language...')
    // cy.log(!['en', 'de'].includes(Cypress.env().language))
     if(!['en', 'de'].includes(Cypress.env().language))
     {

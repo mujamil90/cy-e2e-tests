@@ -15,7 +15,7 @@ describe('verify PurgoMalum Api with negative test cases', () => {
       } */
 
     context('GET /read - check for more than 10 comma separated words', () => {
-        it.skip('should return an error message if providing more than 10 comma separated words in ADD parameter', function()  {
+        it('should return an error message if providing more than 10 comma separated words in ADD parameter', function()  {
             cy.request({
                 method: 'GET',
                 url: Cypress.config().baseUrlApi + '/service/json',
@@ -35,7 +35,7 @@ describe('verify PurgoMalum Api with negative test cases', () => {
   
   } */
 context('GET /read - value of FILL-TEXT out of accepted characters', () => {
-    it.skip('should return an error message if providing value to FILL_TEXT out of accepted input characters', function() {
+    it('should return an error message if providing value to FILL_TEXT out of accepted input characters', function() {
         cy.request({
             method: 'GET',
             url: Cypress.config().baseUrlApi + '/service/json',
@@ -54,7 +54,7 @@ context('GET /read - value of FILL-TEXT out of accepted characters', () => {
     "fill_char":"@"
   } */
 context('GET /read - value of FILL-CHAR out of accepted characters', () => {
-    it.skip('should return an error message if providing value to FILL_CHAR out of accepted input characters', function()  {
+    it('should return an error message if providing value to FILL_CHAR out of accepted input characters', function()  {
         cy.request({
             method: 'GET',
             url: Cypress.config().baseUrlApi + '/service/json',

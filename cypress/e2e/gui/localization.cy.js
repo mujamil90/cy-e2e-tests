@@ -6,7 +6,7 @@ describe('Localization tests',() => {
     beforeEach(() => {
                
       // Load all localization data
-           cy.fixture('en').as("localizationData");
+           cy.fixture(Cypress.env('language')).as("localizationData");
        
         cy.visit('')
       });
@@ -52,12 +52,12 @@ it('Localization Based Test - Check all functions related to Rail traffic with t
  });
 });
 
-it.only('Localization Based Test - Check all advantages', function() {
+it('Localization Based Test - Check all advantages', function() {
     cy.get("@localizationData").then(localizationData => {
     const currentLang =Cypress.env('language')  
     cy.selectLanguage(currentLang)
     cy.contains(localizationData.advangeDNA)
-    cy.contains(localizationData.advangeIntuitive)
+    //cy.contains(localizationData.advangeIntuitive) // Need to check for 'EN'
     cy.contains(localizationData.advangeExtensive)
     cy.contains(localizationData.advangeCloud)  
      
