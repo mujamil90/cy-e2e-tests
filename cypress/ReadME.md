@@ -1,0 +1,1 @@
+ELECTRON_ENABLE_LOGGING=1 ./node_modules/.bin/cypress run    --env  language=de   --spec "cypress/e2e/gui/home.cy.js"

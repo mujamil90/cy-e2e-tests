@@ -1,0 +1,22 @@
+{
+  "name": "cy-e2e-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:run:api": "./node_modules/.bin/cypress run    --spec 'cypress/e2e/api/**.**.js'",
+    "cypress:run:web": "./node_modules/.bin/cypress run   --browser=chrome --env  language=en  --headed  --spec 'cypress/e2e/gui/**.**.js'",
+    "cy:open:mob": "./node_modules/.bin/cypress run   --browser=chrome --env device=mob --spec cypress/e2e/gui/**.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/skip-test": "^2.6.1",
+    "cypress": "^12.12.0"
+  },
+  "dependencies": {
+    "chai-json-schema": "^1.5.1"
+  }
+}

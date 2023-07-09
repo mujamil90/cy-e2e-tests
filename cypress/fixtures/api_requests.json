@@ -1,0 +1,60 @@
+{
+  
+  "api_requests": [
+{
+  "text": "Deutsch Eck is in koblenz"
+},
+{
+  "text": "Deutsch Eck is in koblenz",
+  "add" : "koblenz"
+},
+{
+  "text": "Deutsch Eck is in koblenz",
+  "add" : "koblenz",
+  "fill_text": "berlin"
+},
+{
+  "text": "Deutsch Eck is in koblenz",
+  "add" : "koblenz",
+  "fill_char": ""
+},
+{
+  "text": "Deutsch Eck is in koblenz",
+  "add" : "koblenz",
+  "fill_char": "="
+},
+{
+"text": "Deutsch Eck is in koblenz",
+"add" : "koblenz",
+"fill_text" : "=",
+"fill_char":"~"
+},
+{
+  "text": "This is Deutsch Eck",
+  "add": "Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck,Deutsch Eck"
+},
+{
+  "text": "This is Deutsch Eck",
+  "add": "Deutsch Eck",
+  "fill_text":"@"
+
+},
+{
+  "text": "This is Deutsch Eck",
+  "add": "Deutsch Eck",
+  "fill_char":"@"
+
+},
+{
+  "status_code" : 200,
+  "expected_result" : "Deutsch Eck is in koblenz",
+  "expected_result_fill_text_char_default" : "Deutsch Eck is in *******",
+  "expected_result_fill_text_value" : "Deutsch Eck is in berlin",
+  "expected_result_fill_char_value" : "Deutsch Eck is in =======",
+  "error_message_exceeds_word_limit" : "User Black List Exceeds Limit of 10 Words.",
+  "error_message_invalid_replacement_text" : "Invalid User Replacement Text",
+  "error_message_invalid_replacement_char" :"Invalid User Replacement Characters"
+}
+
+  ]
+}
